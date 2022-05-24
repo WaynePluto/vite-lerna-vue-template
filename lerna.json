@@ -1,0 +1,18 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.0.0",
+  "registry": "https://registry.npmmirror.com/",
+  "command": {
+    "bootstrap": {
+      "npmClientArgs": [
+        "--no-package-lock",
+        "--hoist",
+        "--force-local"
+      ]
+    }
+  }
+}

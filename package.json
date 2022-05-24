@@ -1,0 +1,18 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:lib": "lerna run --scope common_lib dev --stream",
+    "dev:app": "lerna run --scope app dev --stream",
+    "build:lib": "lerna run build --scope common_lib --stream",
+    "build:app": "lerna run build --scope app --stream",
+    "link": "lerna link --force-local",
+    "kills": "lerna run --scope common_lib kill-ports --stream"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
