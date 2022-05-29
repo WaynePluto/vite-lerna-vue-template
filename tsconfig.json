@@ -3,7 +3,7 @@
     "baseUrl": "./",
     "paths": {
       "common_lib": [
-        "packages/common_lib/src/index.ts"
+        "packages/common_lib/src/lib.ts"
       ]
     },
     "module": "esnext",

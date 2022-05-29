@@ -1,9 +1,9 @@
 <template>
-  <Test />
+  <ExampleA />
 </template>
 
 <script setup lang="ts">
-import { Test } from './components/test'
+import { ExampleA } from './components/example-a/exam-a'
 </script>
 
 <style>

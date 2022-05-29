@@ -10,14 +10,16 @@ yarn
 
 ## start
 
+先打包 lib 包后再运行 app
+
 ```
+yarn dev:lib
+
+yarn build:lib
+
 yarn dev:app
-```
 
-## run lib project
-
-```
-yarn lib:dev
+yarn build:app
 ```
 
 ## build

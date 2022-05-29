@@ -5,18 +5,21 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 export default defineConfig(({ mode }) => {
   const config: UserConfig = {
     plugins: [vue(), vueJsx()],
-  }
-  if (mode === 'development') {
-    // 直接引入源文件测试
-    // config.resolve = {
-    //   alias: {
-    //     'common_lib': 'common_lib/src/index.ts',
-    //   },
-    //   dedupe: ['vue'],
-    // }
-    // config.optimizeDeps = {
-    //   exclude: ['common_lib'],
-    // }
+    css: {
+      modules: {
+        localsConvention: 'camelCase',
+      },
+    },
+    // 直接引入源文件而不是打包后的文件
+    resolve: {
+      alias: {
+        'common_lib': 'common_lib/src/lib.ts',
+      },
+      dedupe: ['vue'],
+    },
+    optimizeDeps: {
+      exclude: ['common_lib'],
+    },
   }
 
   return config

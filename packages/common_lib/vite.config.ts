@@ -18,9 +18,9 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       lib: {
-        entry: resolve(__dirname, 'src/index.ts'),
+        entry: resolve(__dirname, 'src/lib.ts'),
         name: 'common_lib',
-        fileName: format => `index.${format}.js`,
+        fileName: format => `lib.${format}.js`,
         formats: ['es'],
       },
       rollupOptions: {
